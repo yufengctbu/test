@@ -10,7 +10,16 @@
     "type": "git",
     "url": "git+https://github.com/yufengctbu/test.git"
   },
-  "url-resolver": {},
+  "url-resolver": {
+    "version": "1.0.0",
+    "routers": [
+      {
+        "mount": "creator/manual",
+        "pipe": "creator/manual.js",
+        "config": "creator/manual.json5"
+      }
+    ]
+  },
   "author": "",
   "license": "ISC",
   "bugs": {
