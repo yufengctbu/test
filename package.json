@@ -25,7 +25,7 @@
       },
       {
         "mount": "creator/doc",
-        "pipe": "/creator\\manual1.js",
+        "pipe": "/creator/manual1.js",
         "config": "creator/manual.json5"
       }
     ]
