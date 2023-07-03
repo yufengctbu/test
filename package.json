@@ -21,7 +21,7 @@
       {
         "mount": "creator/api",
         "pipe": "/creator\\api.js",
-        "config": "creator/manual1.json5"
+        "config": "creator/api.json5"
       }
     ]
   },
