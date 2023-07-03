@@ -2,6 +2,8 @@ exports.test = () => {
   return 'ok';
 };
 
-exports.check = () => {
-  return 'check';
+module.exports = {
+  make: () => {
+    return 'make';
+  },
 };
