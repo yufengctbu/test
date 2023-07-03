@@ -20,7 +20,7 @@
       },
       {
         "mount": "creator/api",
-        "pipe": "creator/api.js",
+        "pipe": "/creator/api.js",
         "config": "creator/manual1.json5"
       }
     ]
