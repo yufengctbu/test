@@ -2,6 +2,8 @@ exports.test = () => {
   return 'ok';
 };
 
-module.exports = function () {
-  return 'this is module.exports';
+module.exports = {
+  make: () => {
+    console.log('this is make');
+  },
 };
