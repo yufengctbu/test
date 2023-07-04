@@ -1,3 +1,3 @@
-exports.parseManual = () => {
+export const parseManual = () => {
   return 'ok';
 };
