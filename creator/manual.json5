@@ -1,4 +1,4 @@
 {
-  baidu: 'https://www.baidu.com',
-  taobao: 'https://www.taobao.com',
+  // 标签文档
+  label: 'https://docs.cocos.com/creator/manual/zh/ui-system/components/editor/label.html',
 }

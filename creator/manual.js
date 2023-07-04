@@ -1,7 +1,3 @@
-exports.test = () => {
+export const parseManual = () => {
   return 'ok';
-};
-
-exports.check = () => {
-  return 'check';
 };

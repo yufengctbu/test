@@ -15,7 +15,10 @@
     "routers": [
       {
         "mount": "creator/manual",
-        "pipe": "creator/manual.js",
+        "pipe": {
+          "file": "creator/manual.js",
+          "method": "parseManual"
+        },
         "config": "/creator\\manual.json5"
       },
       {
