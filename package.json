@@ -35,7 +35,6 @@
   },
   "homepage": "https://github.com/yufengctbu/test#readme",
   "dependencies": {
-    "semver": "^7.5.3",
-    "nimei": "^0.0.1"
+    "semver": "^7.5.3"
   }
 }
