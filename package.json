@@ -19,11 +19,11 @@
           "file": "creator/manual.js",
           "method": "parseManual"
         },
-        "config": "/creator\\manual.json5"
+        "config": "/creator/manual.json5"
       },
       {
         "mount": "creator/api",
-        "pipe": "/creator\\api.js",
+        "pipe": "/creator/api.js",
         "config": "creator/api.json5"
       }
     ]
