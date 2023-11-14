@@ -6,10 +6,6 @@ const paths = ['source/**/*.json5', 'dist'];
 
 // 执行复制操作
 // 'up' 参数设置为 1，这等同于命令行中的 '-u 1'
-copyfiles(paths, { up: 1 }, function (err) {
-    if (err) {
-        console.error('复制文件时出错:', err);
-    } else {
-        console.log('文件复制成功！');
-    }
+copyfiles(paths, { up: 1 }, (err) => {
+    if (err) throw err;
 });
