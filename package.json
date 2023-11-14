@@ -1,40 +1,59 @@
 {
-  "name": "test",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/yufengctbu/test.git"
-  },
-  "url-resolver": {
+    "name": "creator-url-resolver",
     "version": "1.0.0",
-    "routers": [
-      {
-        "mount": "creator/manual",
-        "pipe": {
-          "file": "creator/manual.js",
-          "method": "parseManual"
-        },
-        "config": "/creator/manual.json5"
-      },
-      {
-        "mount": "creator/api",
-        "pipe": "/creator/api.js",
-        "config": "creator/api.json5"
-      }
-    ]
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/yufengctbu/test/issues"
-  },
-  "homepage": "https://github.com/yufengctbu/test#readme",
-  "dependencies": {
-    "semver": "^7.5.3"
-  }
+    "description": "Cocos Creator 服务端相关代码",
+    "main": "index.js",
+    "scripts": {
+        "build": "tsc && copyfiles -u 1 \"source/**/*.json5\" dist",
+        "test": "jest",
+        "test:cov": "jest --coverage",
+        "ci": "npm install && npm run build && npm run test",
+        "prepare": "husky install"
+    },
+    "url-resolver": {
+        "version": "1.0.0",
+        "routers": [
+            {
+                "mount": "creator/manual",
+                "pipe": {
+                    "file": "dist/manual/manual.js",
+                    "method": "parseManual"
+                },
+                "config": "dist/manual/manual.json5"
+            }
+        ]
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@types/jest": "^29.5.7",
+        "@types/semver": "^7.5.4",
+        "@typescript-eslint/eslint-plugin": "^6.9.1",
+        "@typescript-eslint/parser": "^6.9.1",
+        "copyfiles": "^2.4.1",
+        "eslint": "^8.52.0",
+        "eslint-config-prettier": "^9.0.0",
+        "eslint-plugin-prettier": "^5.0.1",
+        "husky": "^8.0.3",
+        "jest": "^29.7.0",
+        "lint-staged": "^15.1.0",
+        "prettier": "^3.1.0",
+        "ts-jest": "^29.1.1",
+        "typescript": "^5.2.2"
+    },
+    "dependencies": {
+        "semver": "^7.5.4"
+    },
+    "lint-staged": {
+        "source/**/*.js": [
+            "eslint --cache --fix",
+            "npm run test:cov",
+            "npm run build"
+        ],
+        "source/**/*.ts": [
+            "prettier --write",
+            "npm run test:cov",
+            "npm run build"
+        ]
+    }
 }
