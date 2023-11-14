@@ -4,7 +4,8 @@
     "description": "Cocos Creator 服务端相关代码",
     "main": "index.js",
     "scripts": {
-        "build": "tsc && node ./scripts/build.js",
+        "build": "tsc && copyfiles -u 1 \"source/**/*.json5\" dist",
+        "build:cov": "tsc && node ./scripts/build.js",
         "test": "jest",
         "test:cov": "jest --coverage",
         "ci": "npm install && npm run build && npm run test",
@@ -49,7 +50,7 @@
         "source/**/*.js": "eslint --cache --fix",
         "source/**/*.(ts|json5)": [
             "prettier --write",
-            "npm run build"
+            "npm run build:cov"
         ]
     }
 }
