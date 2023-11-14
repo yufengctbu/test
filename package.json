@@ -4,7 +4,7 @@
     "description": "Cocos Creator 服务端相关代码",
     "main": "index.js",
     "scripts": {
-        "build": "node ./scripts/build.js",
+        "build": "tsc && node ./scripts/build.js",
         "test": "jest",
         "test:cov": "jest --coverage",
         "ci": "npm install && npm run build && npm run test",
