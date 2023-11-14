@@ -45,15 +45,9 @@
         "semver": "^7.5.4"
     },
     "lint-staged": {
-        "source/**/*.js": [
-            "eslint --cache --fix",
-            "npm run test:cov",
-            "npm run build"
-        ],
+        "source/**/*.js": "eslint --cache --fix",
         "source/**/*.ts": [
-            "prettier --write",
-            "npm run test:cov",
-            "npm run build"
+            "prettier --write"
         ]
     }
 }

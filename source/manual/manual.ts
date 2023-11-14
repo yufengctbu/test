@@ -27,8 +27,6 @@ export const parseManual = (mount: string, url: string, param: IParam): string =
 
     const replaceObject: Record<string, string> = { ...param, version: majorVersion, host: MANUAL_HOST };
 
-    if(!mount) return ''
-
     return url.replace(REPLACE_REG, ($: string, val: string): string => {
         const replaceKey = val.trim();
 
