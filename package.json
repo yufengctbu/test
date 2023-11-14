@@ -26,6 +26,7 @@
     "author": "",
     "license": "ISC",
     "devDependencies": {
+        "@types/copyfiles": "^2.4.3",
         "@types/jest": "^29.5.7",
         "@types/semver": "^7.5.4",
         "@typescript-eslint/eslint-plugin": "^6.9.1",
