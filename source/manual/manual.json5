@@ -131,5 +131,6 @@
     gltf-embeded-image: '{host}/{version}/manual/{lang}/asset/model/glTF.html#gltf-图像',
     gltf-material: '{host}/{version}/manual/{lang}/asset/material.html',
     gltf-mesh: '{host}/{version}/manual/{lang}/asset/model/glTF.html#网格渲染器',
-    gltf-scene: '{host}/{version}/manual/{lang}/asset/model/glTF.html#gltf-场景'
+    gltf-scene: '{host}/{version}/manual/{lang}/asset/model/glTF.html#gltf-场景',
+    gltf-skeleton: '{host}/{version}/manual/{lang}/asset/model/glTF.html#gltf-蒙皮',
 }

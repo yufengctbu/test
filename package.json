@@ -46,6 +46,9 @@
     },
     "lint-staged": {
         "source/**/*.js": "eslint --cache --fix",
-        "source/**/*.ts": "prettier --write"
+        "source/**/*.ts": [
+            "prettier --write",
+            "npm run build"
+        ]
     }
 }
