@@ -1,5 +1,6 @@
 const copyfiles = require('copyfiles');
 const { exec } = require('child_process');
+const { join } = require('path');
 
 // 设置源文件路径和目标目录
 // 在这个例子中，我们复制 'source' 目录下所有的 '.json5' 文件到 'dist' 目录
@@ -29,6 +30,15 @@ const doExec = (command, opts = {}) => {
 const init = async () => {
     const rootDir = process.cwd();
     await copyJson5Files();
+
+    await doExec('jest --coverage --coverageReporters="json-summary"', { shell: true, cwd: rootDir });
+    const coverageSummary = require(join(rootDir, 'coverage/coverage-summary.json'));
+    const { lines, statements, functions, branches } = coverageSummary.total;
+
+    if (lines.pct !== 100 || statements.pct !== 100 || functions.pct !== 100 || branches.pct !== 100) {
+        throw new Error('代码覆盖率没有达到100%, 请运行 npm run test:cov 查看祥情');
+    }
+
     await doExec(`git add dist`, { shell: true, cwd: rootDir });
 };
 
