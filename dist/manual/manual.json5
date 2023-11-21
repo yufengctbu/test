@@ -90,5 +90,5 @@
     RenderRoot2D: '{host}/{version}/manual/{lang}/ui-system/components/editor/renderroot2d.html',
     ReflectionProbe: '{host}/{version}/manual/{lang}/concepts/scene/light/probe/reflection-art-workflow.html',
     Sorting: '{host}/{version}/manual/{lang}/engine/rendering/sorting.html',
-    gltf-animation: '{host}/{version}/manual/{lang}/animation/animation-clip.html1',
+    'gltf-animation': '{host}/{version}/manual/{lang}/animation/animation-clip.html1',
 }
